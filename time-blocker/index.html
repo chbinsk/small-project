@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Time</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto+Mono:wght@300&family=Sora:wght@400;700;800&display=swap');
+        .cont {
+            position: relative;
+            text-align: center;
+            color: black;
+            font-size: 30px;
+            font-weight: 700;
+            font-family: 'Itim', cursive;
+        }
+
+        /* Centered text */
+        #centered {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #imagesec {
+            border-radius: 10%;
+        }
+
+        #nowmatkul {
+            position: absolute;
+            top: 55%;
+            left: 57%;
+            /* transform: translate(-50%, -50%); */
+            color: black;
+            font-size: 30px;
+            font-weight: 700;
+            font-family: 'Itim', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="section has-background-black has-text-white">
+        <div class="content">
+            <h1 class="has-text-white" style="font-family:'Itim', cursive;">My Time</h1>
+        </div>
+        
+        <p class="content is-medium" id="daynow" style="font-family:'Itim', cursive;">
+            <span class="tag is-rounded" id="timenow" style="font-family:'Itim', cursive;">Response Data...</span>
+        </p>
+    </div>
+    <section class="section is-small" id="sectionmain">
+        <div class="columns">
+            <div class="column">
+                <img id="imagesec">
+            </div>
+            <div class="column">
+                <span align="center" id="nowmatkul" class="content is-large">Get Data...</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="cont">
+        <img id="mode" style="width:100%;">
+        <div id="centered"></div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>EuTiblo</strong> by <a href="https://github.com/eugeniusms">Eugenius Mario</a>. The source code is free to use. Thank you.
+          </p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
