@@ -31,7 +31,7 @@ const mySchedule = [
         ],
         "20" : [
             ["Matematika Diskret 2"],
-            [0, 13]
+            [0, 19]
         ]
     },
     { // tuesday
