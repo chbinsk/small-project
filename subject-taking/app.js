@@ -81,16 +81,19 @@ function len(array) {
     return array.length
 }
 
-function recursive(object, search) {
+function recursive(object, search, array) {
     if (len(object[search]) == 0) {
-        console.log([])
+        // do nothing
     } else {
-        console.log(object[search])
+        for (matkul of object[search]) {
+            array.push(matkul)
+        }
         for (i = 0; i < len(object[search]); i++) {
-            recursive(object, object[search][i])
+            recursive(object, object[search][i], array)
         }
     }
 }
 
-
-recursive(subjectPrequisite, "Kecerdasan Artifisial dan Sains Data Dasar")
+let myArray = []
+recursive(subjectPrequisite, "Proyek Perangkat Lunak", myArray)
+console.log(myArray)
