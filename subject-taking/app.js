@@ -212,3 +212,11 @@ searchButton.addEventListener('click', function (e) {
 
 
 // bikin fitur search memudahkan click
+
+// hilangkan error tetep ijo
+// hilangkan error all keluar saat input kosong lagi
+// tambahkan keterangan nama, sks, dan sebagainya
+// perbaiki susunan Search  : ... (matkul nama full saat tombol matkul diklik)
+
+// development data
+// tambahkan deskripsi mata kuliah
