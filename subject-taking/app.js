@@ -219,4 +219,4 @@ searchButton.addEventListener('click', function (e) {
 // perbaiki susunan Search  : ... (matkul nama full saat tombol matkul diklik)
 
 // development data
-// tambahkan deskripsi mata kuliah
+// tambahkan deskripsi mata kuliah (proyek baru)
