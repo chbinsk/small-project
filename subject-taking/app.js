@@ -78,6 +78,7 @@ const subjectPrequisite = {
 }
 
 const allSubject = [
+    // term 1
     "Dasar-Dasar Pemrograman 1",
     "Pengantar Sistem Digital",
     "Matematika Diskret 1",
@@ -160,8 +161,11 @@ setInterval(() => {
             console.log(buton)
             buton.addEventListener('click', function () {
                 console.log(this.id)
-                this.className = "button is-success"
+                this.className = "button is-dark"
                 printMataKuliah(this.id)
+                setInterval(() => {
+                    this.className = "button is-light"
+                }, 1000)
             });
         }
     }
@@ -175,13 +179,14 @@ subject.addEventListener('input', function (e) {
     const searchListHTML = document.querySelector("#searchList")
     // clear search first every ngetik wkwk
     searchListHTML.innerText = ""
-
-    for (s of searchSubjectList) {
-        const newChoice = document.createElement("button")
-        newChoice.className = "button is-light"
-        newChoice.id = s
-        newChoice.innerText = s;
-        searchListHTML.append(newChoice);
+    if (subject.value != "") {
+        for (s of searchSubjectList) {
+            const newChoice = document.createElement("button")
+            newChoice.className = "button is-light"
+            newChoice.id = s
+            newChoice.innerText = s;
+            searchListHTML.append(newChoice);
+        }
     }
 });
 
@@ -208,9 +213,6 @@ searchButton.addEventListener('click', function (e) {
     printMataKuliah(subject.value)
 })
 
-
-
-
 // bikin fitur search memudahkan click
 
 // hilangkan error tetep ijo
@@ -220,3 +222,5 @@ searchButton.addEventListener('click', function (e) {
 
 // development data
 // tambahkan deskripsi mata kuliah (proyek baru)
+
+// error null value show all button
