@@ -116,8 +116,89 @@ const allSubject = [
 
 // Objek berisi data dari tiap mata kuliah
 const subjectData = {
+    // term 1
     "Dasar-Dasar Pemrograman 1": [
         4
+    ],
+    "Pengantar Sistem Digital": [
+        4
+    ],
+    "Matematika Diskret 1": [
+        3
+    ],
+    "Kalkulus 1": [
+        3
+    ],
+    // term 2
+    "Dasar-Dasar Pemrograman 2": [
+        4
+    ], 
+    "Pengantar Organisasi Komputer": [
+        3
+    ],
+    "Matematika Diskret 2": [
+        3
+    ],
+    "Kalkulus 2": [
+        3
+    ],
+    // term 3
+    "Pemrograman Berbasis Platform": [
+        4
+    ],
+    "Struktur Data dan Algoritma": [
+        4
+    ],
+    "Metodologi Penelitian dan Penulisan Ilmiah": [
+        3
+    ],
+    "Sistem Operasi": [
+        4
+    ],
+    "Aljabar Linier": [
+        3
+    ],
+    // term 4
+    "Statistika dan Probabilitas": [
+        3
+    ],
+    "Sistem Interaksi": [
+        3
+    ],
+    "Pemrograman Lanjut": [
+        4
+    ],
+    "Teori Bahasa dan Automata": [
+        4
+    ],
+    "Basis Data": [
+        4
+    ],
+    // term 5
+    "Jaringan Komputer": [
+        4
+    ],
+    "Kecerdasan Artifisial dan Sains Data Dasar": [
+        4
+    ],
+    "Analisis Numerik": [
+        3
+    ],
+    "Desain dan Analisis Algoritma": [
+        4
+    ],
+    "Rekayasa Perangkat Lunak": [
+        3
+    ],
+    // term 6-8
+    "Proyek Perangkat Lunak": [
+        6
+    ],
+    "Komputer dan Masyarakat": [
+        3
+    ],
+    "Tugas Akhir": [
+        6
     ]
 }
 
@@ -182,9 +263,15 @@ function printMataKuliah(search) {
     for (i = 0; i < myArray.length; i++) {
         const boxx = document.createElement('div')
         boxx.className = "box"
-        const oneSubject = document.createElement("ul")
-        oneSubject.innerText = myArray[i]
+        const oneSubject = document.createElement("p")
+        oneSubject.innerText = myArray[i] 
+        oneSubject.className = "has-text-weight-semibold"
+        const sks = document.createElement('span')
+        sks.className = "tag is-info"
+        sks.innerText = subjectData[myArray[i]] + " SKS"
+        
         boxx.append(oneSubject)
+        boxx.append(sks)
         printList.append(boxx)
     }
 }
@@ -219,7 +306,7 @@ setInterval(() => {
                 setInterval(() => {
                     this.className = "tag"
                 }, 1000)
-                board.innerText = this.id
+                board.innerText = this.id + " (" + subjectData[this.id] + "SKS)"
             });
         }
     }
@@ -236,7 +323,7 @@ subject.addEventListener('input', function (e) {
         printList.innerHTML = ""
         need.innerText = ""
     }
-    board.innerText = subject.value;
+    board.innerText = subject.value
     console.log(searchSubject(subject.value))
 
     // Inisiasi array searchSubjectList yang merupakan return dari fungsi searchSubject,
