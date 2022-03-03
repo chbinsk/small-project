@@ -118,87 +118,113 @@ const allSubject = [
 const subjectData = {
     // term 1
     "Dasar-Dasar Pemrograman 1": [
-        4
+        4,
+        "CSGE601020"
     ],
     "Pengantar Sistem Digital": [
-        4
+        4,
+        "CSCM601150"
     ],
     "Matematika Diskret 1": [
-        3
+        3,
+        "CSGE601010"
     ],
     "Kalkulus 1": [
-        3
+        3,
+        "CSGE601012"
     ],
     // term 2
     "Dasar-Dasar Pemrograman 2": [
-        4
+        4,
+        "CSGE601021"
     ], 
     "Pengantar Organisasi Komputer": [
-        3
+        3,
+        "CSCM601252"
     ],
     "Matematika Diskret 2": [
-        3
+        3,
+        "CSGE601011"
     ],
     "Kalkulus 2": [
-        3
+        3,
+        "CSCM601213"
     ],
     // term 3
     "Pemrograman Berbasis Platform": [
-        4
+        4,
+        "CSGE602022"
     ],
     "Struktur Data dan Algoritma": [
-        4
+        4,
+        "CSGE602040"
     ],
     "Metodologi Penelitian dan Penulisan Ilmiah": [
-        3
+        3,
+        "CSGE602091"
     ],
     "Sistem Operasi": [
-        4
+        4,
+        "CSCM602055"
     ],
     "Aljabar Linier": [
-        3
+        3,
+        "CSGE602012"
     ],
     // term 4
     "Statistika dan Probabilitas": [
-        3
+        3,
+        "CSGE602013"
     ],
     "Sistem Interaksi": [
-        3
+        3,
+        "CSGE602024"
     ],
     "Pemrograman Lanjut": [
-        4
+        4,
+        "CSCM602223"
     ],
     "Teori Bahasa dan Automata": [
-        4
+        4,
+        "CSCM602241"
     ],
     "Basis Data": [
-        4
+        4,
+        "CSGE602070"
     ],
     // term 5
     "Jaringan Komputer": [
-        4
+        4,
+        "CSCM603154"
     ],
     "Kecerdasan Artifisial dan Sains Data Dasar": [
-        4
+        4,
+        "CSGE603130"
     ],
     "Analisis Numerik": [
-        3
+        3,
+        "CSCM603117"
     ],
     "Desain dan Analisis Algoritma": [
-        4
+        4,
+        "CSCM603142"
     ],
     "Rekayasa Perangkat Lunak": [
-        3
+        3,
+        "CSCM603125"
     ],
     // term 6-8
     "Proyek Perangkat Lunak": [
-        6
+        6,
+        "CSCM603228"
     ],
     "Komputer dan Masyarakat": [
-        3
+        3,
+        "CSGE614093"
     ],
     "Tugas Akhir": [
-        6
+        6,
+        "CSGE604099"
     ]
 }
 
@@ -268,10 +294,16 @@ function printMataKuliah(search) {
         oneSubject.className = "has-text-weight-semibold"
         const sks = document.createElement('span')
         sks.className = "tag is-info"
-        sks.innerText = subjectData[myArray[i]] + " SKS"
+        sks.innerText = subjectData[myArray[i]][0] + " SKS"
+        const code = document.createElement('span')
+        code.className = "tag is-info is-light"
+        code.innerText = subjectData[myArray[i]][1]
+
+        boxx.id = myArray[i]
         
         boxx.append(oneSubject)
         boxx.append(sks)
+        boxx.append(code)
         printList.append(boxx)
     }
 }
@@ -306,13 +338,20 @@ setInterval(() => {
                 setInterval(() => {
                     this.className = "tag"
                 }, 1000)
-                board.innerText = this.id + " (" + subjectData[this.id] + "SKS)"
+                board.innerText = this.id + " (" + subjectData[this.id][0] + "SKS) - " + subjectData[this.id][1]
             });
         }
     }
-    // if (subject.value == "") {
-    //     printMataKuliah("kosong")
-    // }
+    // Klik dari daftar mata kuliah lalu
+    const matkulBoxx = document.querySelectorAll('div')
+    for (let matkul of matkulBoxx) {
+        if (matkul.className == "box") {
+            matkul.addEventListener('click', function() {
+                printMataKuliah(this.id)
+                board.innerText = this.id + " (" + subjectData[this.id][0] + "SKS) - " + subjectData[this.id][1]
+            })
+        }
+    }
 }, 1000)
 
 // Ketika input dari laman diisi oleh user, maka program akan mencetak board yang ada dalam
