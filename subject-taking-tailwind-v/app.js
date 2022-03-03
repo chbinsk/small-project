@@ -1,4 +1,3 @@
-// Object mata kuliah dengan pre-requisitenya
 const subjectPrequisite = {
     // term 1
     "Dasar-Dasar Pemrograman 1": [],
@@ -78,7 +77,6 @@ const subjectPrequisite = {
     ]
 }
 
-// Objek berisi semua mata kuliah yang ada
 const allSubject = [
     // term 1
     "Dasar-Dasar Pemrograman 1",
@@ -114,19 +112,10 @@ const allSubject = [
     "Tugas Akhir"
 ]
 
-// Objek berisi data dari tiap mata kuliah
-const subjectData = {
-    "Dasar-Dasar Pemrograman 1": [
-        4
-    ]
-}
-
-// Fungsi untuk mengembalikan panjang suatu array
 function len(array) {
     return array.length
 }
 
-// Fungsi untuk mencari mata kuliah pre-requisite secara rekursif
 function recursive(object, search, array) {
     if (len(object[search]) == 0) {
         // do nothing
@@ -140,8 +129,6 @@ function recursive(object, search, array) {
     }
 }
 
-// Fungsi untuk mencari subject sesuai dengan input yang diambil per indexnya
-// Kemudian jika ada maka push ke result kembalikan sebagai array
 function searchSubject(search) {
     // search by sequences
     console.log(search)
@@ -157,7 +144,53 @@ function searchSubject(search) {
     return result
 }
 
-// Fungsi print daftar mata kuliah prerequisite (dibawah mata kuliah kelulusan :)
+const subject= document.querySelector("#subject")
+const board = document.querySelector("#board")
+const searchButton = document.querySelector("#searchButton")
+const printList = document.querySelector("#subjectList")
+
+let myArray = []
+// recursive(subjectPrequisite, subject, myArray)
+console.log(myArray)
+
+// tombol pilih matkul search
+setInterval(() => {
+    const subjectSearchButton = document.querySelectorAll('button');
+    for (let buton of subjectSearchButton) {
+        if (buton.className == "button is-light") {
+            console.log(buton)
+            buton.addEventListener('click', function () {
+                console.log(this.id)
+                this.className = "button is-dark"
+                printMataKuliah(this.id)
+                setInterval(() => {
+                    this.className = "button is-light"
+                }, 1000)
+            });
+        }
+    }
+}, 1000)
+
+subject.addEventListener('input', function (e) {
+    board.innerText = subject.value;
+    console.log(searchSubject(subject.value))
+
+    const searchSubjectList = searchSubject(subject.value)
+    const searchListHTML = document.querySelector("#searchList")
+    // clear search first every ngetik wkwk
+    searchListHTML.innerText = ""
+    if (subject.value != "") {
+        for (s of searchSubjectList) {
+            const newChoice = document.createElement("button")
+            newChoice.className = "button is-light"
+            newChoice.id = s
+            newChoice.innerText = s;
+            searchListHTML.append(newChoice);
+        }
+    }
+});
+
+// fungsi print daftar mata kuliah prerequisite (dibawah mata kuliah kelulusan :)
 function printMataKuliah(search) {
     let myArray = []
     recursive(subjectPrequisite, search, myArray)
@@ -168,106 +201,13 @@ function printMataKuliah(search) {
     const need = document.querySelector("#need")
     need.innerText = "Mata kuliah membutuhkan kelulusan :"
 
-    // saat tidak ada mata kuliah pre-requisite
-    const notificationForNull = document.querySelector("#divneed")
-    
-    if (myArray.length == 0) {
-        // remove delButton first (reset)
-        notificationForNull.className = "notification is-success is-light"
-        need.innerText = "Mata kuliah ini tidak membutuhkan kelulusan mata kuliah lain"
-    } else {
-        notificationForNull.className = "block"
-    }
-
     for (i = 0; i < myArray.length; i++) {
-        const boxx = document.createElement('div')
-        boxx.className = "box"
         const oneSubject = document.createElement("ul")
         oneSubject.innerText = myArray[i]
-        boxx.append(oneSubject)
-        printList.append(boxx)
+        printList.append(oneSubject)
     }
 }
 
-// Inisiasi object dari document HTML
-const subject= document.querySelector("#subject")
-const board = document.querySelector("#board")
-const searchButton = document.querySelector("#searchButton")
-const printList = document.querySelector("#subjectList")
-
-let myArray = []
-// recursive(subjectPrequisite, subject, myArray)
-console.log(myArray)
-
-// Interval tiap satu detik, jika tombol dipencet maka ubah warna
-// dan jalankan fungsi printMataKuliah() yaitu mata kuliah pre-requisite
-setInterval(() => {
-    const subjectSearchButton = document.querySelectorAll('span');
-    // Untuk setiap tombol yang ada di dalam HTML dan memiliki class "button is-light"
-    // Jalankan addEventListener 'click' yang jika diclick maka akan merujuk ke this (objectnya)
-    // Untuk mengubah className menjadi "button is-dark", kemudian lakukan printMataKuliah(sesuai id object diclick)
-    // Setiap detik setelah klik akan ada reset ulang button ke "button is-light"
-    for (let buton of subjectSearchButton) {
-        if (buton.className == "tag") {
-            // Jika tombol diclick maka jalankan fungsi di bawah
-            buton.addEventListener('click', function () {
-                console.log(this.id)
-                this.className = "tag is-dark"
-                // Cetak semua mata kuliah pre-requisite sesuai id dari object
-                printMataKuliah(this.id)
-                // Reset style tombol
-                setInterval(() => {
-                    this.className = "tag"
-                }, 1000)
-                board.innerText = this.id
-            });
-        }
-    }
-    // if (subject.value == "") {
-    //     printMataKuliah("kosong")
-    // }
-}, 1000)
-
-// Ketika input dari laman diisi oleh user, maka program akan mencetak board yang ada dalam
-// HTML menjadi sesuai apa yang diketik user, kemudian program akan menampilkan data yang 
-subject.addEventListener('input', function (e) {
-    // Reset isi printList ketika kosong
-    if (subject.value == "") {
-        printList.innerHTML = ""
-        need.innerText = ""
-    }
-    board.innerText = subject.value;
-    console.log(searchSubject(subject.value))
-
-    // Inisiasi array searchSubjectList yang merupakan return dari fungsi searchSubject,
-    // searchSubject berguna untuk mencari potongan yang terketik pada input untuk dicocokan
-    // dengan daftar subject yang didaftarkan di dalam array allSubject
-    const searchSubjectList = searchSubject(subject.value)
-    // Memilih query dengan id = "searchList" untuk dilakukan penambahan daftar subject yang dipilih
-    const searchListHTML = document.querySelector("#searchList")
-
-    // Digunakan sebagai reset searchList untuk setiap pengetikan di input
-    searchListHTML.innerText = ""
-
-    // Ketika isi input tidak kosong, maka lakukan penambahan button
-    if (subject.value != "") {
-        // searchSubjectList merupakan array yang dicocokkan dengan potongan slice input ke allSubject
-        for (s of searchSubjectList) {
-            // Menginisasi object button baru
-            const newChoice = document.createElement("span")
-            // Setiap button yang diinisiasi diset stylenya ke "button is-light"
-            // Kemudian id dan innerText objek button disesuaikan dengan subject (s)
-            newChoice.className = "tag"
-            newChoice.id = s
-            newChoice.innerText = s;
-            // Setelah itu, semuanya ditambahkan ke searchList (daftar button yang di bawah kolom search)
-            searchListHTML.append(newChoice);
-        }
-    }
-});
-
-// Ketika tombol search diklik maka jika ada mata kuliah yang sesuai dengan isi input
-// Akan diprint setiap mata kuliah pre-requisitenya
 searchButton.addEventListener('click', function (e) {
     console.log(subject.value);
     printMataKuliah(subject.value)
