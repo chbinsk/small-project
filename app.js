@@ -21,6 +21,11 @@ const myMiniProject = [
         "buildYear": "2022"
     },
     {
+        "name": "Math Quiz",
+        "buildMonth": "March",
+        "buildYear": "2022"
+    },
+    {
         "name": "Sample",
         "buildMonth": "March",
         "buildYear": "2022"
