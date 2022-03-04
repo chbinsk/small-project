@@ -3,6 +3,9 @@ const bab = document.querySelector('#bab')
 const soalHTML = document.querySelector('#soal')
 const jawabanHTML = document.querySelector('#jawaban')
 
+// lokasi simpan kunci jawaban
+let KUNCI = ""
+
 const babList = [
     {
     "name": "Persamaan Kuadrat",
@@ -37,7 +40,13 @@ for (b of babList) {
     daftarBab.innerText = b["name"]
     daftarBab.id = b["name"]
 
+    const scoreCounter = document.createElement('button')
+    scoreCounter.className = "button is-info is-light"
+    scoreCounter.innerText = 0
+    scoreCounter.id = "score"
+
     bab.append(daftarBab)
+    bab.append(scoreCounter)
 }
 
 function susunSoal(soal) {
@@ -60,7 +69,7 @@ function susunSoal(soal) {
     
 }
 
-function callJawaban(jawaban) { // wajib berisi 5 isi dalam 1 array, index 0 adalah index yang benar
+function callJawaban(jawaban) { // wajib berisi 5 isi dalam 1 array, index 0 adalah index yang benar (kunjaw)
     // clear semua abcde, opsi dan newLine dulu
     const jawabanButton = document.querySelectorAll('button')
     for (let jwbButton of jawabanButton) {
@@ -79,6 +88,8 @@ function callJawaban(jawaban) { // wajib berisi 5 isi dalam 1 array, index 0 ada
         }
     }
 
+    KUNCI = jawaban[0]
+    console.log(KUNCI)
     jawaban = acakJawaban(jawaban)
 
     // susun opsi jawaban
@@ -152,6 +163,16 @@ function acakJawaban(arrayJawaban) {
     return newArrayJawaban
 }
 
+function scoreCounting(bool) {
+    const scorePlus = document.querySelector("#score")
+    let oldScore = parseInt(scorePlus.innerText)
+    if (bool == true) {
+        scorePlus.innerText = oldScore + 5
+    } else {
+        scorePlus.innerText = oldScore - 5
+    }
+}
+
 setInterval(() => {
     const allBab = document.querySelectorAll('button')
     for (b of allBab) {
@@ -163,3 +184,21 @@ setInterval(() => {
         }
     }
 }, 1000);
+
+// cekJawaban
+setInterval(() => {
+    const allOpsiJawaban = document.querySelectorAll('button')
+    for (buton of allOpsiJawaban) {
+        if (buton.id == "opsiJawaban" && buton.className == "button is-info is-light") {
+            buton.addEventListener('click', function() {
+                if (this.innerText == KUNCI) {
+                    this.className = "button is-success is-light"
+                    scoreCounting(true)
+                } else {
+                    this.className = "button is-danger is-light"
+                    scoreCounting(false)
+                }
+            })
+        }
+    }
+}, 2000);
