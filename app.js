@@ -138,7 +138,6 @@ setInterval(() => {
             miniProject.addEventListener('click', function () {
                 console.log("EH")
                 getLink(this.innerText)
-                this.innerText = "Process..."
             });
         }
     }
