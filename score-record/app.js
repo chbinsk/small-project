@@ -2,7 +2,7 @@ const people = [
     {
         "name": "Dignasia Fahman Asna",
         "panggilan": "Ignas",
-        "email": "",
+        "email": "ignas",
         "password": "",
         "post-test": [45, 72],
         "latihan": ["Belum mengumpulkan"],
@@ -11,7 +11,7 @@ const people = [
     {
         "name": "Falah Naufal Zaki",
         "panggilan": "Falah",
-        "email": "",
+        "email": "falah",
         "password": "",
         "post-test": [100, 76],
         "latihan": ["Belum mengumpulkan"],
@@ -20,7 +20,7 @@ const people = [
     {
         "name": "Muhammad Raffa Al Ghiffary",
         "panggilan": "Raffa",
-        "email": "",
+        "email": "raffa",
         "password": "",
         "post-test": [70, 88],
         "latihan": ["Belum mengumpulkan"],
@@ -29,7 +29,7 @@ const people = [
     {
         "name": "Muhammad Ramdhan Yusuf",
         "panggilan": "Ramdhan",
-        "email": "",
+        "email": "ramdhan",
         "password": "",
         "post-test": [80, 76],
         "latihan": ["Belum mengumpulkan"],
@@ -38,7 +38,7 @@ const people = [
     {
         "name": "Muhammad Yahya Fatahillah Safiq",
         "panggilan": "Yahya",
-        "email": "",
+        "email": "yahya",
         "password": "",
         "post-test": [80, 100],
         "latihan": ["Belum mengumpulkan"],
@@ -47,7 +47,7 @@ const people = [
     {
         "name": "Radar Zinggih Kusuma Wibawa",
         "panggilan": "Radar",
-        "email": "",
+        "email": "radar",
         "password": "",
         "post-test": [40, 72],
         "latihan": ["Belum mengumpulkan"],
@@ -56,7 +56,7 @@ const people = [
     {
         "name": "Radinka Rafi'ie Achmad Pradipta",
         "panggilan": "Rafi'ie",
-        "email": "",
+        "email": "rafi",
         "password": "",
         "post-test": [100, 88],
         "latihan": ["Belum mengumpulkan"],
@@ -93,6 +93,17 @@ const dashboardScene = document.querySelector("#dashboard")
 const postTestScene = document.querySelector("#post-test")
 const latihanScene = document.querySelector("#latihan")
 
+function averageArray(array) {
+    let sum = 0
+    let total = array.length
+    for (index of array) {
+        if (Number.isInteger(index)) {
+            sum += index
+        }
+    }
+    return sum / total
+}
+
 function ValidationAndDeleteLoginForm(bool) {
     if (bool == true) {
         emailTag.remove()
@@ -103,7 +114,7 @@ function ValidationAndDeleteLoginForm(bool) {
     }
 }
 
-function buildDashboard(email) {
+function buildDashboard(person) {
     const dashboardTitle = document.createElement('span')
     dashboardTitle.innerText = "Rerata Nilai :"
     dashboardTitle.className = "tag"
@@ -111,32 +122,60 @@ function buildDashboard(email) {
     const boxRerata = document.createElement('div')
     boxRerata.className = "box"
 
-    const postTestRerataButton = document.createElement('button')
-    postTestRerataButton.className = "button is-info is-small"
-    postTestRerataButton.innerText = "Post-test :"
+    const tableName = document.createElement('table')
+    tableName.className = "table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
 
-    const postTestRerataNilai = document.createElement('button')
-    postTestRerataNilai.className = "button is-info is-light is-small"
-    postTestRerataNilai.innerText = "100"
+    const tableContent = [
+        [
+            "Komponen",
+            "Rerata"
+        ],
+        [ // post-test
+            "Post-test",
+            averageArray(person["post-test"]) // post-test
+        ],
+        [
+            "Latihan",
+            averageArray(person["latihan"])
+        ]
+    ]
 
-    const latihanRerataButton = document.createElement('button')
-    latihanRerataButton.className = "button is-info is-small"
-    latihanRerataButton.innerText = "Latihan         :"
+    count = 0
+    for (content of tableContent) {
+        if (count == 0) {
+            const thead = document.createElement('thead')
 
-    const latihanRerataNilai = document.createElement('button')
-    latihanRerataNilai.className = "button is-info is-light is-small"
-    latihanRerataNilai.innerText = "100"
+            const tr = document.createElement('tr')
 
-    const newLine = document.createElement('br')
+            for (isi of content) {
+                const th = document.createElement('th')
+                th.innerText = isi
+                th.className = "is-info"
+
+                tr.append(th)
+            }
+
+            thead.append(tr)
+            tableName.append(thead)
+        } else {
+            const tbody = document.createElement('tbody')
+            const tr = document.createElement('tr')
+
+            for (isi of content) {
+                const th = document.createElement('th')
+                th.innerText = isi
+                tr.append(th)
+            }
+
+            tbody.append(tr)
+            tableName.append(tbody)
+        }
+        count+=1
+    }
+            
 
     dashboardScene.append(dashboardTitle)
-    boxRerata.append(postTestRerataButton)
-    boxRerata.append(postTestRerataNilai)
-
-    boxRerata.append(newLine)
-    boxRerata.append(latihanRerataButton)
-    boxRerata.append(latihanRerataNilai)
-
+    boxRerata.append(tableName)
     dashboardScene.append(boxRerata)
 }
 
@@ -226,11 +265,11 @@ inputButton.addEventListener('click', function () {
     const getInputValue = input.value
     for (person of people) {
         if (person["email"] == getInputValue) {
-            getTitle.innerText = "Hai " + person.name + "!"
+            getTitle.innerText = "Hai, " + person.name + "!"
             getSubtite.innerText = "pertahankan nilai yang sudah baik ya :> semisal masih ada nilai yang masih kurang memuaskan gapapa masih ada waktu untuk belajar lebih giat lagi,   jadi semangat terus belajarnya " + person["panggilan"].toLowerCase() + "!"
             getSubtite.className = "notification is-info is-light"
 
-            buildDashboard(getInputValue)
+            buildDashboard(person)
             tampilanNilaiPostTest(getInputValue)
             tampilanNilaiLatihan(getInputValue)
             ValidationAndDeleteLoginForm(true)
