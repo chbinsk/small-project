@@ -8,7 +8,7 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [90, 100],
         "latihan": [75, 80],
-        "pemrograman": [10]
+        "pemrograman": [10],
     },
     {
         "name": "Eugenius Mario Situmorang",
@@ -159,6 +159,31 @@ function averageArray(array) {
     }
 }
 
+function getAllAverageTotal(email) {
+    for (person of people) {
+        if (person["email"] == email) {
+            let pretest = 0
+            let postTest = 0
+            let latihan = 0
+            let pemrograman = 0
+            if (Number.isFinite(averageArray(person["pretest"]))) {
+                pretest += averageArray(person["pretest"]) 
+            }
+            if (Number.isFinite(averageArray(person["post-test"]))) {
+                postTest += averageArray(person["post-test"]) 
+            }
+            if (Number.isFinite(averageArray(person["latihan"]))) {
+                latihan += averageArray(person["latihan"]) 
+            }
+            if (Number.isFinite(averageArray(person["pemrograman"]))) {
+                pemrograman += averageArray(person["pemrograman"]) 
+            }
+
+            return pretest + postTest + latihan + pemrograman
+        }
+    }
+}
+
 function ValidationAndDeleteLoginForm(bool) {
     if (bool == true) {
         emailTag.remove()
@@ -250,7 +275,7 @@ function tampilanNilaiPretest(email) {
         if (person["email"] == email) {
             const pretestTag = document.createElement('span')
             pretestTag.className = "tag"
-            pretestTag.innerText = "Post-test"
+            pretestTag.innerText = "Pretest"
             pretestScene.append(pretestTag)
 
             let count = 0
@@ -349,7 +374,7 @@ function tampilanNilaiLatihan(email) {
                 const scoreButton = document.createElement('button')
                 scoreButton.className = "button is-info is-light is-small"
 
-                if (score.isInteger) {
+                if (Number.isInteger(score)) {
                     scoreButton.innerText = score + " / 100"
                 } else {
                     scoreButton.innerText = score 
@@ -390,7 +415,7 @@ function tampilanNilaiPemrograman(email) {
                 const scoreButton = document.createElement('button')
                 scoreButton.className = "button is-info is-light is-small"
 
-                if (score.isInteger) {
+                if (Number.isInteger(score)) {
                     scoreButton.innerText = score + " / 100"
                 } else {
                     scoreButton.innerText = score 
@@ -407,8 +432,54 @@ function tampilanNilaiPemrograman(email) {
     }
 }
 
+function sortRank(allMember, allScore) { // array
+    let allScoreClone = []
+    for (score of allScore) {
+        allScoreClone.push(score)
+    }
+    let sortNameRank = []
+    let sortResult = allScoreClone.sort(function(a, b){return b-a})
+
+    for (result of sortResult) {
+        console.log(allMember[allScore.indexOf(result)])
+        sortNameRank.push(allMember[allScore.indexOf(result)])
+    }
+
+    console.log(sortNameRank)
+    console.log(sortResult)
+    return sortNameRank
+}
+
+function buildAdminDashboard(sortNameRank) {
+    const boxx = document.createElement('div')
+    boxx.className = "box"
+    console.log(sortNameRank)
+    for (nama of sortNameRank) {
+        const namaUrut = document.createElement('p')
+        namaUrut.innerText = nama
+        boxx.append(namaUrut)
+    }
+    const adminDashboard = document.querySelector('#adminDashboard')
+    adminDashboard.append(boxx)
+}
+
 function adminDashboard() {
     dashboardScene.innerText = "YOHO"
+
+    let allMember = []
+    let allScore = []
+    for (person of people) {
+        if (person["role"] == "member") {
+            allMember.push(person["name"])
+            allScore.push(getAllAverageTotal(person["email"])) // test total rerata
+        }
+    }
+    console.log(allMember)
+    console.log(allScore)
+
+    let sortNameRank = sortRank(allMember, allScore)
+    console.log("anda" + sortNameRank)
+    buildAdminDashboard(sortNameRank)
 }
 
 inputButton.addEventListener('click', function () {
@@ -433,7 +504,7 @@ inputButton.addEventListener('click', function () {
                     ValidationAndDeleteLoginForm(true)
                 } else {
                     getTitle.innerText = "Hai, " + person.name + "!"
-                    getSubtite.innerText = "pertahankan nilai yang sudah baik ya :> semisal masih ada nilai yang masih kurang memuaskan gapapa masih ada waktu untuk belajar lebih giat lagi, semangat terus belajarnya " + person["panggilan"].toLowerCase() + "!"
+                    getSubtite.innerText = "Pertahankan nilai yang sudah baik ya :> semisal masih ada nilai yang masih kurang memuaskan gapapa masih ada waktu untuk belajar lebih giat lagi, semangat terus belajarnya " + person["panggilan"].toLowerCase() + "!"
                     getSubtite.className = "notification is-info is-light"
 
                     buildDashboard(person)
@@ -441,6 +512,9 @@ inputButton.addEventListener('click', function () {
                     tampilanNilaiPostTest(getInputValue)
                     tampilanNilaiLatihan(getInputValue)
                     tampilanNilaiPemrograman(getInputValue)
+
+                    console.log(getAllAverageTotal(getInputValue)) // test total rerata
+
                     ValidationAndDeleteLoginForm(true)
                 }
             } else {
@@ -460,3 +534,5 @@ inputButton.addEventListener('click', function () {
         inputValidation.innerText = "Email yang anda masukkan tidak terdaftar!"
     }
 })
+
+// change isInteger -> isFinite
