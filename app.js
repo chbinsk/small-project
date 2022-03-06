@@ -26,6 +26,11 @@ const myMiniProject = [
         "buildYear": "2022"
     },
     {
+        "name": "Score Record",
+        "buildMonth": "March",
+        "buildYear": "2022"
+    },
+    {
         "name": "Sample",
         "buildMonth": "March",
         "buildYear": "2022"
