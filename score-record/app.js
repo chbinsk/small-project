@@ -20,7 +20,7 @@ const people = [
     {
         "name": "Dignasia Fahman Asna",
         "panggilan": "Ignas",
-        "email": "ignas",
+        "email": "dignasiafahman19@gmail.com",
         "password": "dfa99",
         "role": "member",
         "pretest": ["Belum ada"],
@@ -32,7 +32,7 @@ const people = [
     {
         "name": "Falah Naufal Zaki",
         "panggilan": "Falah",
-        "email": "falah",
+        "email": "falahnzk@gmail.com",
         "password": "fnz98",
         "role": "member",
         "pretest": ["Belum ada"],
@@ -44,7 +44,7 @@ const people = [
     {
         "name": "Muhammad Raffa Al Ghiffary",
         "panggilan": "Raffa",
-        "email": "raffa",
+        "email": "muhammadraffaal88@gmail.com",
         "password": "mrag97",
         "role": "member",
         "pretest": ["Belum ada"],
@@ -56,7 +56,7 @@ const people = [
     {
         "name": "Muhammad Ramdhan Yusuf",
         "panggilan": "Ramdhan",
-        "email": "ramdhan",
+        "email": "ramdhanyusuf73@gmail.com",
         "password": "mry96",
         "role": "member",
         "pretest": ["Belum ada"],
@@ -68,7 +68,7 @@ const people = [
     {
         "name": "Muhammad Yahya Fatahillah Safiq",
         "panggilan": "Yahya",
-        "email": "yahya",
+        "email": "muhammadsafiq959@gmail.com",
         "password": "myfs95",
         "role": "member",
         "pretest": ["Belum ada"],
@@ -80,7 +80,7 @@ const people = [
     {
         "name": "Radar Zinggih Kusuma Wibawa",
         "panggilan": "Radar",
-        "email": "radar",
+        "email": "radarkusuma90@gmail.com",
         "password": "rzkw94",
         "role": "member",
         "pretest": ["Belum ada"],
@@ -92,7 +92,7 @@ const people = [
     {
         "name": "Radinka Rafi'ie Achmad Pradipta",
         "panggilan": "Rafi'ie",
-        "email": "rafi",
+        "email": "rafi.radinka@gmail.com",
         "password": "rrap93",
         "role": "member",
         "pretest": ["Belum ada"],
