@@ -109,7 +109,7 @@ const people = [
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [85, 24],
-        "latihan": ["Belum mengumpulkan"],
+        "latihan": [93.33],
         "pemrograman": ["Belum ada"],
         "pekerjaan": "https://drive.google.com/drive/folders/1y_FZhx1t-YxDAPK6PZlucbrypc7hvWNu?usp=sharing"
     }
