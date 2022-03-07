@@ -21,7 +21,7 @@ const people = [
         "name": "Dignasia Fahman Asna",
         "panggilan": "Ignas",
         "email": "ignas",
-        "password": "",
+        "password": "dfa99",
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [45, 72],
@@ -33,7 +33,7 @@ const people = [
         "name": "Falah Naufal Zaki",
         "panggilan": "Falah",
         "email": "falah",
-        "password": "",
+        "password": "fnz98",
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [100, 76],
@@ -45,7 +45,7 @@ const people = [
         "name": "Muhammad Raffa Al Ghiffary",
         "panggilan": "Raffa",
         "email": "raffa",
-        "password": "",
+        "password": "mrag97",
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [70, 88],
@@ -57,7 +57,7 @@ const people = [
         "name": "Muhammad Ramdhan Yusuf",
         "panggilan": "Ramdhan",
         "email": "ramdhan",
-        "password": "",
+        "password": "mry96",
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [80, 76],
@@ -69,7 +69,7 @@ const people = [
         "name": "Muhammad Yahya Fatahillah Safiq",
         "panggilan": "Yahya",
         "email": "yahya",
-        "password": "",
+        "password": "myfs95",
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [80, 100],
@@ -81,7 +81,7 @@ const people = [
         "name": "Radar Zinggih Kusuma Wibawa",
         "panggilan": "Radar",
         "email": "radar",
-        "password": "",
+        "password": "rzkw94",
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [40, 72],
@@ -93,7 +93,7 @@ const people = [
         "name": "Radinka Rafi'ie Achmad Pradipta",
         "panggilan": "Rafi'ie",
         "email": "rafi",
-        "password": "",
+        "password": "rrap93",
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [100, 88],
@@ -105,7 +105,7 @@ const people = [
         "name": "Ririn Muthii'atussolikhah",
         "panggilan": "Ririn",
         "email": "ririnlucky06@gmail.com",
-        "password": "",
+        "password": "rm92",
         "role": "member",
         "pretest": ["Belum ada"],
         "post-test": [85, 24],
@@ -135,6 +135,7 @@ const taskNamePemrograman = [
 ]
 
 
+const imageSaka = document.querySelector('#sakaimg')
 const emailTag = document.querySelector('#emailTag')
 const passwordTag = document.querySelector('#passwordTag')
 const input = document.querySelector("#inputEmail")
@@ -194,6 +195,7 @@ function getAllAverageTotal(email) {
 
 function ValidationAndDeleteLoginForm(bool) {
     if (bool == true) {
+        imageSaka.remove()
         emailTag.remove()
         passwordTag.remove()
 
