@@ -157,7 +157,7 @@ function averageArray(array) {
     let sum = 0
     let total = array.length
     for (index of array) {
-        if (Number.isInteger(index)) {
+        if (Number.isFinite(index)) {
             sum += index
         }
     }
@@ -362,7 +362,7 @@ function tampilanNilaiPretest(email) {
                 const scoreButton = document.createElement('button')
                 scoreButton.className = "button is-info is-light is-small"
                 
-                if (Number.isInteger(score)) {
+                if (Number.isFinite(score)) {
                     scoreButton.innerText = score + " / 100"
                 } else {
                     scoreButton.innerText = score 
@@ -402,7 +402,7 @@ function tampilanNilaiPostTest(email) {
                 const scoreButton = document.createElement('button')
                 scoreButton.className = "button is-info is-light is-small"
                 
-                if (Number.isInteger(score)) {
+                if (Number.isFinite(score)) {
                     scoreButton.innerText = score + " / 100"
                 } else {
                     scoreButton.innerText = score 
@@ -442,7 +442,7 @@ function tampilanNilaiLatihan(email) {
                 const scoreButton = document.createElement('button')
                 scoreButton.className = "button is-info is-light is-small"
 
-                if (Number.isInteger(score)) {
+                if (Number.isFinite(score)) {
                     scoreButton.innerText = score + " / 100"
                 } else {
                     scoreButton.innerText = score 
@@ -483,7 +483,7 @@ function tampilanNilaiPemrograman(email) {
                 const scoreButton = document.createElement('button')
                 scoreButton.className = "button is-info is-light is-small"
 
-                if (Number.isInteger(score)) {
+                if (Number.isFinite(score)) {
                     scoreButton.innerText = score + " / 100"
                 } else {
                     scoreButton.innerText = score 
