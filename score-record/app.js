@@ -263,6 +263,31 @@ function generateLinks(person) {
     allLinks.append(newLine7)
     linkToki.append(buttonToki)
     allLinks.append(linkToki)
+    const newLine75 = document.createElement('br')
+    allLinks.append(newLine75)
+
+    // https://forms.gle/YBZTrwsoSftAxuX99
+
+    // Untuk yang sudah mengumpulkan bisa membuka tombol latihan
+    console.log(person["latihan"])
+    if (person["latihan"][0] != "Belum mengumpulkan") {
+        const tagRilisTugas = document.createElement('span')
+        tagRilisTugas.className = "tag"
+        tagRilisTugas.innerText = "Rilis Latihan"
+        const linkRilisTugas = document.createElement('a')
+        linkRilisTugas.href = "https://forms.gle/YBZTrwsoSftAxuX99"
+        const buttonRilisTugas = document.createElement('button')
+        buttonRilisTugas.className = "button is-info is-small"
+        buttonRilisTugas.innerText = "Latihan Pemrograman 1"
+
+        const newLine8 = document.createElement('br')
+        allLinks.append(newLine8)
+        allLinks.append(tagRilisTugas)
+        const newLine9 = document.createElement('br')
+        allLinks.append(newLine9)
+        linkRilisTugas.append(buttonRilisTugas)
+        allLinks.append(linkRilisTugas)
+    }
 }
 
 function buildDashboard(person) {
