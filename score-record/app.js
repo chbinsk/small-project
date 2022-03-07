@@ -26,7 +26,8 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [45, 72],
         "latihan": ["Belum mengumpulkan"],
-        "pemrograman": ["Belum ada"]
+        "pemrograman": ["Belum ada"],
+        "pekerjaan": "https://drive.google.com/drive/folders/1dhM1zLwIM59LveRfgSOASSfyzTyWIbvg?usp=sharing"
     },
     {
         "name": "Falah Naufal Zaki",
@@ -37,7 +38,8 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [100, 76],
         "latihan": ["Belum mengumpulkan"],
-        "pemrograman": ["Belum ada"]
+        "pemrograman": ["Belum ada"],
+        "pekerjaan": "https://drive.google.com/drive/folders/1uK6SADIAeoZd_3UiDYt1A3fPnMlE5h2g?usp=sharing"
     },
     {
         "name": "Muhammad Raffa Al Ghiffary",
@@ -48,7 +50,8 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [70, 88],
         "latihan": ["Belum mengumpulkan"],
-        "pemrograman": ["Belum ada"]
+        "pemrograman": ["Belum ada"],
+        "pekerjaan": "https://drive.google.com/drive/folders/1Gi_oBB4WFs8vq_Tj1vGz-qMKUbNR5l2W?usp=sharing"
     },
     {
         "name": "Muhammad Ramdhan Yusuf",
@@ -59,7 +62,8 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [80, 76],
         "latihan": ["Belum mengumpulkan"],
-        "pemrograman": ["Belum ada"]
+        "pemrograman": ["Belum ada"],
+        "pekerjaan": "https://drive.google.com/drive/folders/1HFinz25rbpGqghpHZE9SW6py2QXYtSRu?usp=sharing"
     },
     {
         "name": "Muhammad Yahya Fatahillah Safiq",
@@ -70,7 +74,8 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [80, 100],
         "latihan": ["Belum mengumpulkan"],
-        "pemrograman": ["Belum ada"]
+        "pemrograman": ["Belum ada"],
+        "pekerjaan": "https://drive.google.com/drive/folders/12gecWdFTw4T4uaBfvjjVWlZtmWfaXvMJ?usp=sharing"
     },
     {
         "name": "Radar Zinggih Kusuma Wibawa",
@@ -81,7 +86,8 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [40, 72],
         "latihan": ["Belum mengumpulkan"],
-        "pemrograman": ["Belum ada"]
+        "pemrograman": ["Belum ada"],
+        "pekerjaan": "https://drive.google.com/drive/folders/1B8jQUNThArRtq26DQFXEVrLGrm3aKbkw?usp=sharing"
     },
     {
         "name": "Radinka Rafi'ie Achmad Pradipta",
@@ -92,7 +98,8 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [100, 88],
         "latihan": ["Belum mengumpulkan"],
-        "pemrograman": ["Belum ada"]
+        "pemrograman": ["Belum ada"],
+        "pekerjaan": "https://drive.google.com/drive/folders/1QHIfadpxglcQ_wDhZYcangiFUh82jA8N?usp=sharing"
     },
     {
         "name": "Ririn Muthii'atussolikhah",
@@ -103,7 +110,8 @@ const people = [
         "pretest": ["Belum ada"],
         "post-test": [85, 24],
         "latihan": ["Belum mengumpulkan"],
-        "pemrograman": ["Belum ada"]
+        "pemrograman": ["Belum ada"],
+        "pekerjaan": "https://drive.google.com/drive/folders/1y_FZhx1t-YxDAPK6PZlucbrypc7hvWNu?usp=sharing"
     }
 ]
 
@@ -195,6 +203,64 @@ function ValidationAndDeleteLoginForm(bool) {
     } else {
         
     }
+}
+
+function generateLinks(person) {
+    const allLinks = document.querySelector('#allLinks')
+    allLinks.className = "box"
+
+    const tagLink = document.createElement('span')
+    tagLink.className = "tag"
+    tagLink.innerText = "Hasil Tugas Anda"
+    const link = document.createElement('a')
+    link.href = person["pekerjaan"]
+    const buttonLink = document.createElement('button')
+    buttonLink.className = "button is-info is-small"
+    buttonLink.innerText = "Your Assignments"
+
+    link.append(buttonLink) 
+    allLinks.append(tagLink)
+    const newLine1 = document.createElement('br')
+    allLinks.append(newLine1)
+    allLinks.append(link)
+    const newLine2 = document.createElement('br')
+    allLinks.append(newLine2)
+
+    const tagEmailTo = document.createElement('span')
+    tagEmailTo.className = "tag"
+    tagEmailTo.innerText = "Kirim Tugas Anda"
+    const linkEmailTo = document.createElement('a')
+    linkEmailTo.href = "mailto:eugeniusms@gmail.com?subject=Pengumpulan%20Tugas%20-%20" + person["name"] + "&body=<%20Isi%20Nama%20Tugas%20dan%20Upload%20File%20Anda%20>"
+    const buttonEmailTo = document.createElement('button')
+    buttonEmailTo.className = "button is-info is-small"
+    buttonEmailTo.innerText = "Submit Your Assignments"
+
+    const newLine3 = document.createElement('br')
+    allLinks.append(newLine3)
+    allLinks.append(tagEmailTo)
+    const newLine4 = document.createElement('br')
+    allLinks.append(newLine4)
+    linkEmailTo.append(buttonEmailTo)
+    allLinks.append(linkEmailTo)
+    const newLine5 = document.createElement('br')
+    allLinks.append(newLine5)
+
+    const tagToki = document.createElement('span')
+    tagToki.className = "tag"
+    tagToki.innerText = "Latihan Pemrograman"
+    const linkToki = document.createElement('a')
+    linkToki.href = "https://tlx.toki.id/courses/basic"
+    const buttonToki = document.createElement('button')
+    buttonToki.className = "button is-info is-small"
+    buttonToki.innerText = "TLX TOKI"
+
+    const newLine6 = document.createElement('br')
+    allLinks.append(newLine6)
+    allLinks.append(tagToki)
+    const newLine7 = document.createElement('br')
+    allLinks.append(newLine7)
+    linkToki.append(buttonToki)
+    allLinks.append(linkToki)
 }
 
 function buildDashboard(person) {
@@ -507,6 +573,7 @@ inputButton.addEventListener('click', function () {
                     getSubtite.innerText = "Pertahankan nilai yang sudah baik ya :> semisal masih ada nilai yang masih kurang memuaskan gapapa masih ada waktu untuk belajar lebih giat lagi, semangat terus belajarnya " + person["panggilan"].toLowerCase() + "!"
                     getSubtite.className = "notification is-info is-light"
 
+                    generateLinks(person)
                     buildDashboard(person)
                     tampilanNilaiPretest(getInputValue)
                     tampilanNilaiPostTest(getInputValue)
