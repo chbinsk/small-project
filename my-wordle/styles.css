@@ -1,0 +1,23 @@
+* {
+    background-color: #1c1b1b;
+}
+
+.coll {
+    display: inline;
+    padding: 3px;
+}
+
+#keyboard {
+    align-items: center;
+}
+
+.keybo {
+    display: inline-block;
+    background-color: gray;
+    margin: 0.25rem;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 0.25rem;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 800;
+    color: white;
+}
