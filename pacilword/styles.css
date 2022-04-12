@@ -81,6 +81,7 @@ header h1 {
     color: white;
     font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
+    text-align: center;
 }
 
 #keyboard {

@@ -58,40 +58,47 @@ keyboard.append(keyboard3)
 
 // Get input from user
 let userInput = ""
+let counterInput = 0
 // Click keyboard function
 const getKey = document.querySelectorAll('div')
 for (key of getKey) {
     if (key.className == "keybo") {
         key.addEventListener('click', function() {
             console.log(key)
+            
+            // CHECK COUNTER INPUT FIRST
+            if (counterInput != lenWord || this.innerText == "ENTER" || this.innerText == "DEL") { 
+                if (this.innerText == "ENTER") {
+                    counterInput = 0 // Reset
+                    console.log("SUBMIT")
+                } else if (this.innerText == "DEL") {
+                    userInput = userInput.slice(0, userInput.length-1)
+                    counterInput -= 1
 
-            if (this.innerText == "ENTER") {
-                console.log("SUBMIT")
-            } else if (this.innerText == "DEL") {
-                userInput = userInput.slice(0, userInput.length-1)
-
-                // DELETE
-                let lstObj = []
-                const colls = document.querySelectorAll('div')
-                for (co of colls) {
-                    if (co.className == "coll") {
-                        if (co.innerText != "") {
-                            lstObj.push(co)
+                    // DELETE
+                    let lstObj = []
+                    const colls = document.querySelectorAll('div')
+                    for (co of colls) {
+                        if (co.className == "coll") {
+                            if (co.innerText != "") {
+                                lstObj.push(co)
+                            }
                         }
                     }
-                }
-                lstObj[lstObj.length-1].innerText = ""
-                console.log(lstObj)
-            } else {
-                userInput += this.innerText
+                    lstObj[lstObj.length-1].innerText = ""
+                    console.log(lstObj)
+                } else {
+                    userInput += this.innerText
+                    counterInput += 1
 
-                // CREATE
-                let setof = false
-                const colls = document.querySelectorAll('div')
-                for (co of colls) {
-                    if (co.className == "coll" && co.innerText == "" && setof == false) {
-                        co.innerText = this.innerText
-                        setof = true;
+                    // CREATE
+                    let setof = false
+                    const colls = document.querySelectorAll('div')
+                    for (co of colls) {
+                        if (co.className == "coll" && co.innerText == "" && setof == false) {
+                            co.innerText = this.innerText
+                            setof = true;
+                        }
                     }
                 }
             }
