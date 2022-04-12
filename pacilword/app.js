@@ -57,10 +57,6 @@ keyboard.append(keyboard2)
 keyboard.append(keyboard3)
 
 // Click keyboard function
-setInterval(() => {
-
-})
-
 const getKey = document.querySelectorAll('div')
 for (key of getKey) {
     if (key.className == "keybo") {
@@ -73,3 +69,18 @@ for (key of getKey) {
         })
     }
 }
+
+const help = document.querySelector("#help")
+help.addEventListener('click', function() {
+    const profile = document.createElement('div')
+    profile.innerText = "Created by Eugenius Mario S"
+    profile.className = "profile"
+    const cont = document.querySelector('#cont')
+    cont.append(profile)
+
+    setInterval(() => {
+        profile.remove()
+    },2000)
+})
+
+ 
