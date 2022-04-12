@@ -34,6 +34,11 @@ const myMiniProject = [
         "name": "Sample",
         "buildMonth": "March",
         "buildYear": "2022"
+    },
+    {
+        "name": "Pacilword",
+        "buildMonth": "April",
+        "buildYear": "2022"
     }
 ]
 
