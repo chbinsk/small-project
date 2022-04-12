@@ -56,20 +56,55 @@ keyboard.append(keyboard1)
 keyboard.append(keyboard2)
 keyboard.append(keyboard3)
 
+// Get input from user
+let userInput = ""
 // Click keyboard function
 const getKey = document.querySelectorAll('div')
 for (key of getKey) {
     if (key.className == "keybo") {
         key.addEventListener('click', function() {
             console.log(key)
-            const letter = document.createElement('div')
-            letter.innerText = this.innerText
-            letter.className = "keybo"
-            container.append(letter)
+
+            if (this.innerText == "ENTER") {
+                console.log("SUBMIT")
+            } else if (this.innerText == "DEL") {
+                userInput = userInput.slice(0, userInput.length-1)
+
+                // DELETE
+                let lstObj = []
+                const colls = document.querySelectorAll('div')
+                for (co of colls) {
+                    if (co.className == "coll") {
+                        if (co.innerText != "") {
+                            lstObj.push(co)
+                        }
+                    }
+                }
+                lstObj[lstObj.length-1].innerText = ""
+                console.log(lstObj)
+            } else {
+                userInput += this.innerText
+
+                // CREATE
+                let setof = false
+                const colls = document.querySelectorAll('div')
+                for (co of colls) {
+                    if (co.className == "coll" && co.innerText == "" && setof == false) {
+                        co.innerText = this.innerText
+                        setof = true;
+                    }
+                }
+            }
+            console.log(userInput)
+
+            
+
+
         })
     }
 }
 
+// Create help button
 const help = document.querySelector("#help")
 help.addEventListener('click', function() {
     const profile = document.createElement('div')
