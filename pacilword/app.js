@@ -68,7 +68,9 @@ for (key of getKey) {
             
             // CHECK COUNTER INPUT FIRST
             if (counterInput != lenWord || this.innerText == "ENTER" || this.innerText == "DEL") { 
-                if (this.innerText == "ENTER") {
+                if (this.innerText == "ENTER" && counterInput != lenWord) {
+                    // NO ARG DO NOTHING
+                } else if (this.innerText == "ENTER" && counterInput == lenWord) {
                     counterInput = 0 // Reset
                     console.log("SUBMIT")
                 } else if (this.innerText == "DEL") {
