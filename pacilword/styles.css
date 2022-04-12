@@ -27,7 +27,7 @@ h1 {
     padding: 2.5rem;
 }
 
-#boxKey{
+#keybo1, #keybo2, #keybo3 {
     display: flex;
     justify-content: center;
 }

@@ -29,8 +29,11 @@ const characters = ['Q', 'W', 'E', 'R', 'T', 'Y ', 'U', 'I', 'O', 'P',
                     'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
                     'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'DEL']
 const keyboard1 = document.createElement('div')
+keyboard1.id = "keybo1"
 const keyboard2 = document.createElement('div')
+keyboard2.id = "keybo2"
 const keyboard3 = document.createElement('div')
+keyboard3.id = "keybo3"
 for (i = 0; i < 28; i++) {
     if (i < 10) {
         const divKey1 = document.createElement('div')
