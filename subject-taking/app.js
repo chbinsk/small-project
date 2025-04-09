@@ -93,38 +93,95 @@ const subjectPrequisite = {
 
 // Objek berisi semua mata kuliah yang ada
 const allSubject = [
-    // term 1
-    "Dasar-Dasar Pemrograman 1",
-    "Pengantar Sistem Digital",
-    "Matematika Diskret 1",
-    "Kalkulus 1",
+// term 1
+    "MPK Agama",
+    "MPK Bahasa Inggris",
+    "Pengantar Ekonomi 1",
+    "Matematika Dasar untuk Ekonomi dan Bisnis",
+    "Pengantar Bisnis",
+    "Teknik Penulisan Akademik dan Pengantar Komunikasi Bisnis",
+    "Statistika Ekonomi dan Bisnis",
+    "Literasi dalam Bahasa Inggris",
+
     // term 2
-    "Dasar-Dasar Pemrograman 2",
-    "Pengantar Organisasi Komputer",
-    "Matematika Diskret 2",
-    "Kalkulus 2",
+    "MPK Terintegrasi",
+    "Pengantar Ekonomi 2",
+    "Pengantar Manajemen",
+    "Pengantar Akuntansi",
+    "Matematika Keuangan",
+    "Koperasi",
+    "Metode Analisis Kasus Akuntansi dan Bisnis (MAKAB)",
+
     // term 3
-    "Pemrograman Berbasis Platform",
-    "Struktur Data dan Algoritma",
-    "Metodologi Penelitian dan Penulisan Ilmiah",
-    "Sistem Operasi",
-    "Aljabar Linier",
+    "Akuntansi Biaya",
+    "Pengantar Manajemen Operasi",
+    "Pengantar Manajemen Pemasaran",
+    "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)",
+    "Mikroekonomi 1",
+    "Struktur, Proses, dan Perilaku Organisasi",
+    "Akuntansi Keuangan 1",
+    "Manajemen Keuangan",
+
     // term 4
-    "Statistika dan Probabilitas",
-    "Sistem Interaksi",
-    "Pemrograman Lanjut",
-    "Teori Bahasa dan Automata",
-    "Basis Data",
+    "Pengauditan dan Asuransi 1",
+    "Akuntansi Manajemen (AM)",
+    "Transformasi Digital untuk Bisnis",
+    "Hukum dan Regulasi Bisnis",
+    "Perpajakan 1",
+    "Akuntansi Keuangan 2",
+    "Dasar-dasar Kepemimpinan",
+    "Pengantar Kewirausahaan",
+    "Manusia Sebagai Pelaku Ekonomi dan Bisnis",
+
     // term 5
-    "Jaringan Komputer",
-    "Kecerdasan Artifisial dan Sains Data Dasar",
-    "Analisis Numerik",
-    "Desain dan Analisis Algoritma",
-    "Rekayasa Perangkat Lunak",
-    // term 6-8
-    "Proyek Perangkat Lunak",
-    "Komputer dan Masyarakat",
-    "Tugas Akhir"
+    "Investasi dan Pasar Modal",
+    "Pengauditan dan Asuransi 2",
+    "Perpajakan 2",
+    "Analitik Bisnis",
+    "Akuntansi Keuangan Lanjutan",
+    "Tata Kelola dan Manajemen Risiko",
+    "Etika dan Keberlanjutan",
+
+    // term 6
+    "Strategi dan Manajemen Kinerja Organisasi",
+    "Analisis dan Pelaporan Keuangan",
+    "Bisnis Global",
+
+    // term 8
+    "Magang Tugas Akhir",
+    "Skripsi",
+    "Studi Mandiri (plus 1 Mata Kuliah Pilihan Bebas)",
+
+    // mk pilihan
+    "Audit Keuangan Negara",
+    "Akuntansi Organisasi Nirlaba",
+    "Akuntansi Sektor Publik",
+    "Akuntansi Syariah",
+    "Analisis dan Perancangan Sistem",
+    "Analisis Keputusan Bisnis",
+    "Audit Sistem Informasi",
+    "Manajemen Teknologi Informasi",
+    "Perpajakan Internasional",
+    "Manajemen Perpajakan",
+    "Audit Internal",
+    "Audit Investigasi dan Akuntansi Forensik",
+    "Transformasi Digital dan Implikasi Akuntansi",
+    "Keuangan Perusahaan Lanjutan",
+    "Akuntansi Keuangan Lanjutan",
+    "Tata Kelola Perusahaan dan Manajemen Risiko",
+    "Metode Penelitian Akuntansi",
+    "Akuntansi Manajemen Lanjutan",
+    "Praktik Akuntansi dan Bisnis Kontemporer",
+    "Praktik Audit pada Industri Spesifik",
+    "Big Data dan Komputasi Kognitif",
+    "Dasar-Dasar Merger dan Akuisisi",
+    "Audit dan Analitik",
+    "Akuntan dan Kepemimpinan Ekonomi Digital",
+    "Dasar-Dasar Restrukturisasi Bisnis",
+    "Prinsip-Prinsip Berpikir Kreatif",
+    "Akuntansi dan Bisnis Berkelanjutan",
+    "Analitik Bisnis Lanjutan",
+    "Teori Akuntansi Keuangan",
 ]
 
 // Objek berisi data dari tiap mata kuliah
@@ -134,111 +191,95 @@ const subjectData = {
         4,
         "CSGE601020"
     ],
-    "Pengantar Sistem Digital": [
-        4,
-        "CSCM601150"
-    ],
-    "Matematika Diskret 1": [
-        3,
-        "CSGE601010"
-    ],
-    "Kalkulus 1": [
-        3,
-        "CSGE601012"
-    ],
+     // term 1
+    "MPK Agama": [],
+    "MPK Bahasa Inggris": [],
+    "Pengantar Ekonomi 1": [],
+    "Matematika Dasar untuk Ekonomi dan Bisnis": [],
+    "Pengantar Bisnis": [],
+    "Teknik Penulisan Akademik dan Pengantar Komunikasi Bisnis": [],
+    "Statistika Ekonomi dan Bisnis": [],
+    "Literasi dalam Bahasa Inggris": [],
+
     // term 2
-    "Dasar-Dasar Pemrograman 2": [
-        4,
-        "CSGE601021"
-    ], 
-    "Pengantar Organisasi Komputer": [
-        3,
-        "CSCM601252"
-    ],
-    "Matematika Diskret 2": [
-        3,
-        "CSGE601011"
-    ],
-    "Kalkulus 2": [
-        3,
-        "CSCM601213"
-    ],
+    "MPK Terintegrasi": [],
+    "Pengantar Ekonomi 2": [],
+    "Pengantar Manajemen": [],
+    "Pengantar Akuntansi": [],
+    "Matematika Keuangan": [],
+    "Koperasi": [],
+    "Metode Analisis Kasus Akuntansi dan Bisnis (MAKAB)": [],
+
     // term 3
-    "Pemrograman Berbasis Platform": [
-        4,
-        "CSGE602022"
-    ],
-    "Struktur Data dan Algoritma": [
-        4,
-        "CSGE602040"
-    ],
-    "Metodologi Penelitian dan Penulisan Ilmiah": [
-        3,
-        "CSGE602091"
-    ],
-    "Sistem Operasi": [
-        4,
-        "CSCM602055"
-    ],
-    "Aljabar Linier": [
-        3,
-        "CSGE602012"
-    ],
+    "Akuntansi Biaya": [],
+    "Pengantar Manajemen Operasi": [],
+    "Pengantar Manajemen Pemasaran": [],
+    "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)": [],
+    "Mikroekonomi 1": [],
+    "Struktur, Proses, dan Perilaku Organisasi": [],
+    "Akuntansi Keuangan 1": [],
+    "Manajemen Keuangan": [],
+
     // term 4
-    "Statistika dan Probabilitas": [
-        3,
-        "CSGE602013"
-    ],
-    "Sistem Interaksi": [
-        3,
-        "CSGE602024"
-    ],
-    "Pemrograman Lanjut": [
-        4,
-        "CSCM602223"
-    ],
-    "Teori Bahasa dan Automata": [
-        4,
-        "CSCM602241"
-    ],
-    "Basis Data": [
-        4,
-        "CSGE602070"
-    ],
+    "Pengauditan dan Asuransi 1": [],
+    "Akuntansi Manajemen (AM)": [],
+    "Transformasi Digital untuk Bisnis": [],
+    "Hukum dan Regulasi Bisnis": [],
+    "Perpajakan 1": [],
+    "Akuntansi Keuangan 2": [],
+    "Dasar-dasar Kepemimpinan": [],
+    "Pengantar Kewirausahaan": [],
+    "Manusia Sebagai Pelaku Ekonomi dan Bisnis": [],
+
     // term 5
-    "Jaringan Komputer": [
-        4,
-        "CSCM603154"
-    ],
-    "Kecerdasan Artifisial dan Sains Data Dasar": [
-        4,
-        "CSGE603130"
-    ],
-    "Analisis Numerik": [
-        3,
-        "CSCM603117"
-    ],
-    "Desain dan Analisis Algoritma": [
-        4,
-        "CSCM603142"
-    ],
-    "Rekayasa Perangkat Lunak": [
-        3,
-        "CSCM603125"
-    ],
-    // term 6-8
-    "Proyek Perangkat Lunak": [
-        6,
-        "CSCM603228"
-    ],
-    "Komputer dan Masyarakat": [
-        3,
-        "CSGE614093"
-    ],
-    "Tugas Akhir": [
-        6,
-        "CSGE604099"
-    ]
+    "Investasi dan Pasar Modal": [],
+    "Pengauditan dan Asuransi 2": [],
+    "Perpajakan 2": [],
+    "Analitik Bisnis": [],
+    "Akuntansi Keuangan Lanjutan": [],
+    "Tata Kelola dan Manajemen Risiko": [],
+    "Etika dan Keberlanjutan": [],
+
+    // term 6
+    "Strategi dan Manajemen Kinerja Organisasi": [],
+    "Analisis dan Pelaporan Keuangan": [],
+    "Bisnis Global": [],
+
+    // term 8
+    "Magang Tugas Akhir": [],
+    "Skripsi": [],
+    "Studi Mandiri (plus 1 Mata Kuliah Pilihan Bebas)": [],
+
+    // mk pilihan
+    "Audit Keuangan Negara": [],
+    "Akuntansi Organisasi Nirlaba": [],
+    "Akuntansi Sektor Publik": [],
+    "Akuntansi Syariah": [],
+    "Analisis dan Perancangan Sistem": [],
+    "Analisis Keputusan Bisnis": [],
+    "Audit Sistem Informasi": [],
+    "Manajemen Teknologi Informasi": [],
+    "Perpajakan Internasional": [],
+    "Manajemen Perpajakan": [],
+    "Audit Internal": [],
+    "Audit Investigasi dan Akuntansi Forensik": [],
+    "Transformasi Digital dan Implikasi Akuntansi": [],
+    "Keuangan Perusahaan Lanjutan": [],
+    "Akuntansi Keuangan Lanjutan": [],
+    "Tata Kelola Perusahaan dan Manajemen Risiko": [],
+    "Metode Penelitian Akuntansi": [],
+    "Akuntansi Manajemen Lanjutan": [],
+    "Praktik Akuntansi dan Bisnis Kontemporer": [],
+    "Praktik Audit pada Industri Spesifik": [],
+    "Big Data dan Komputasi Kognitif": [],
+    "Dasar-Dasar Merger dan Akuisisi": [],
+    "Audit dan Analitik": [],
+    "Akuntan dan Kepemimpinan Ekonomi Digital": [],
+    "Dasar-Dasar Restrukturisasi Bisnis": [],
+    "Prinsip-Prinsip Berpikir Kreatif": [],
+    "Akuntansi dan Bisnis Berkelanjutan": [],
+    "Analitik Bisnis Lanjutan": [],
+    "Teori Akuntansi Keuangan": [],
 }
 
 // Fungsi untuk mengembalikan panjang suatu array
