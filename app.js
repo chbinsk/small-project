@@ -1,45 +1,9 @@
 const myMiniProject = [
     {
-        "name": "Score Keeper",
-        "buildMonth": "February",
-        "buildYear": "2022"
-        // link "score-keeper/index.html"
-    },
-    {
-        "name": "Relationship Cards",
-        "buildMonth": "February",
-        "buildYear": "2022"
-    },
-    {
-        "name": "Time Blocker",
-        "buildMonth": "February",
-        "buildYear": "2022"
-    },
-    {
-        "name": "Subject Taking",
-        "buildMonth": "February",
-        "buildYear": "2022"
-    },
-    {
-        "name": "Math Quiz",
-        "buildMonth": "March",
-        "buildYear": "2022"
-    },
-    {
-        "name": "Score Record",
-        "buildMonth": "March",
-        "buildYear": "2022"
-    },
-    {
-        "name": "Sample",
-        "buildMonth": "March",
-        "buildYear": "2022"
-    },
-    {
-        "name": "Pacilword",
+        "name": "Subject Taking FEB UI",
         "buildMonth": "April",
-        "buildYear": "2022"
-    }
+        "buildYear": "2025"
+    },
 ]
 
 const projectByMonth = [
