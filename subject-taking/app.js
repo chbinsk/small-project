@@ -22,7 +22,8 @@ const subjectPrequisite = {
     // term 3
     "Akuntansi Biaya": [],
     "Pengantar Manajemen Operasi": [],
-    "Pengantar Manajemen": [],
+    "Pengantar Manajemen Pemasaran": [],
+    "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)": [],
 }
 
 // Objek berisi semua mata kuliah yang ada
