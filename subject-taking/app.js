@@ -17,42 +17,106 @@ const subjectPrequisite = {
     "Pengantar Akuntansi": [],
     "Matematika Keuangan": [],
     "Koperasi": [],
-    "Metode Analisis Kasus Akuntansi dan Bisnis (MAKAB)": [],
+    "Metode Analisis Kasus Akuntansi dan Bisnis (MAKAB)": [
+        "Pengantar Bisnis"
+    ],
 
     // term 3
-    "Akuntansi Biaya": [],
-    "Pengantar Manajemen Operasi": [],
-    "Pengantar Manajemen Pemasaran": [],
-    "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)": [],
-    "Mikroekonomi 1": [],
-    "Struktur, Proses, dan Perilaku Organisasi": [],
-    "Akuntansi Keuangan 1": [],
-    "Manajemen Keuangan": [],
+    "Akuntansi Biaya": [
+        "Pengantar Akuntansi",
+        "Pengantar Manajemen"
+    ],
+    "Pengantar Manajemen Operasi": [
+        "Pengantar Manajemen"
+    ],
+    "Pengantar Manajemen Pemasaran": [
+        "Pengantar Manajemen"
+    ],
+    "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)": [
+        "Pengantar Akuntansi"
+    ],
+    "Mikroekonomi 1": [
+        "Pengantar Ekonomi 2"
+    ],
+    "Struktur, Proses, dan Perilaku Organisasi": [
+        "Pengantar Manajemen"
+    ],
+    "Akuntansi Keuangan 1": [
+        "Pengantar Akuntansi"
+    ],
+    "Manajemen Keuangan": [
+        "Pengantar Bisnis",
+        "Matematika Keuangan"
+    ],
 
     // term 4
-    "Pengauditan dan Asuransi 1": [],
-    "Akuntansi Manajemen (AM)": [],
-    "Transformasi Digital untuk Bisnis": [],
-    "Hukum dan Regulasi Bisnis": [],
-    "Perpajakan 1": [],
-    "Akuntansi Keuangan 2": [],
+    "Pengauditan dan Asuransi 1": [
+        "Akuntansi Keuangan 1",
+        "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)"
+    ],
+    "Akuntansi Manajemen (AM)": [
+        "Akuntansi Biaya",
+        "Pengantar Manajemen Operasi",
+        "Pengantar Manajemen Pemasaran"
+    ],
+    "Transformasi Digital untuk Bisnis": [
+        "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)"
+    ],
+    "Hukum dan Regulasi Bisnis": [
+        "Pengantar Manajemen",
+        "Struktur, Proses, dan Perilaku Organisasi"
+    ],
+    "Perpajakan 1": [
+        "Akuntansi Keuangan 1"
+    ],
+    "Akuntansi Keuangan 2": [
+        "Akuntansi Keuangan 1"
+    ],
     "Dasar-dasar Kepemimpinan": [],
     "Pengantar Kewirausahaan": [],
     "Manusia Sebagai Pelaku Ekonomi dan Bisnis": [],
 
     // term 5
-    "Investasi dan Pasar Modal": [],
-    "Pengauditan dan Asuransi 2": [],
-    "Perpajakan 2": [],
-    "Analitik Bisnis": [],
-    "Akuntansi Keuangan Lanjutan": [],
-    "Tata Kelola dan Manajemen Risiko": [],
-    "Etika dan Keberlanjutan": [],
+    "Investasi dan Pasar Modal": [
+        "Manajemen Keuangan"
+    ],
+    "Pengauditan dan Asuransi 2": [
+        "Pengauditan dan Asuransi 1"
+    ],
+    "Perpajakan 2": [
+        "Perpajakan 1"
+    ],
+    "Analitik Bisnis": [
+        "Transformasi Digital untuk Bisnis"
+    ],
+    "Akuntansi Keuangan Lanjutan": [
+        "Akuntansi Keuangan 2"
+    ],
+    "Tata Kelola dan Manajemen Risiko": [
+        "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)",
+        "Hukum dan Regulasi Bisnis"
+    ],
+    "Etika dan Keberlanjutan": [
+        "Hukum dan Regulasi Bisnis",
+        "Metode Analisis Kasus Akuntansi dan Bisnis (MAKAB)"
+    ],
 
     // term 6
-    "Strategi dan Manajemen Kinerja Organisasi": [],
-    "Analisis dan Pelaporan Keuangan": [],
-    "Bisnis Global": [],
+    "Strategi dan Manajemen Kinerja Organisasi": [
+        "Manajemen Keuangan",
+        "Akuntansi Manajemen (AM)",
+        "Tata Kelola dan Manajemen Risiko",
+        "Etika dan Keberlanjutan"
+    ],
+    "Analisis dan Pelaporan Keuangan": [
+        "Tata Kelola dan Manajemen Risiko",
+        "Etika dan Keberlanjutan",
+        "Akuntansi Keuangan Lanjutan"
+    ],
+    "Bisnis Global": [
+        "Pengantar Ekonomi 2",
+        "Etika dan Keberlanjutan"
+    ],
 
     // term 8
     "Magang Tugas Akhir": [],
@@ -60,7 +124,9 @@ const subjectPrequisite = {
     "Studi Mandiri (plus 1 Mata Kuliah Pilihan Bebas)": [],
 
     // mk pilihan
-    "Audit Keuangan Negara": [],
+    "Audit Keuangan Negara": [
+        
+    ],
     "Akuntansi Organisasi Nirlaba": [],
     "Akuntansi Sektor Publik": [],
     "Akuntansi Syariah": [],
