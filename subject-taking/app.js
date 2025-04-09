@@ -24,6 +24,71 @@ const subjectPrequisite = {
     "Pengantar Manajemen Operasi": [],
     "Pengantar Manajemen Pemasaran": [],
     "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)": [],
+    "Mikroekonomi 1": [],
+    "Struktur, Proses, dan Perilaku Organisasi": [],
+    "Akuntansi Keuangan 1": [],
+    "Manajemen Keuangan": [],
+
+    // term 4
+    "Pengauditan dan Asuransi 1": [],
+    "Akuntansi Manajemen (AM)": [],
+    "Transformasi Digital untuk Bisnis": [],
+    "Hukum dan Regulasi Bisnis": [],
+    "Perpajakan 1": [],
+    "Akuntansi Keuangan 2": [],
+    "Dasar-dasar Kepemimpinan": [],
+    "Pengantar Kewirausahaan": [],
+    "Manusia Sebagai Pelaku Ekonomi dan Bisnis": [],
+
+    // term 5
+    "Investasi dan Pasar Modal": [],
+    "Pengauditan dan Asuransi 2": [],
+    "Perpajakan 2": [],
+    "Analitik Bisnis": [],
+    "Akuntansi Keuangan Lanjutan": [],
+    "Tata Kelola dan Manajemen Risiko": [],
+    "Etika dan Keberlanjutan": [],
+
+    // term 6
+    "Strategi dan Manajemen Kinerja Organisasi": [],
+    "Analisis dan Pelaporan Keuangan": [],
+    "Bisnis Global": [],
+
+    // term 8
+    "Magang Tugas Akhir": [],
+    "Skripsi": [],
+    "Studi Mandiri (plus 1 Mata Kuliah Pilihan Bebas)": [],
+
+    // mk pilihan
+    "Audit Keuangan Negara": [],
+    "Akuntansi Organisasi Nirlaba": [],
+    "Akuntansi Sektor Publik": [],
+    "Akuntansi Syariah": [],
+    "Analisis dan Perancangan Sistem": [],
+    "Analisis Keputusan Bisnis": [],
+    "Audit Sistem Informasi": [],
+    "Manajemen Teknologi Informasi": [],
+    "Perpajakan Internasional": [],
+    "Manajemen Perpajakan": [],
+    "Audit Internal": [],
+    "Audit Investigasi dan Akuntansi Forensik": [],
+    "Transformasi Digital dan Implikasi Akuntansi": [],
+    "Keuangan Perusahaan Lanjutan": [],
+    "Akuntansi Keuangan Lanjutan": [],
+    "Tata Kelola Perusahaan dan Manajemen Risiko": [],
+    "Metode Penelitian Akuntansi": [],
+    "Akuntansi Manajemen Lanjutan": [],
+    "Praktik Akuntansi dan Bisnis Kontemporer": [],
+    "Praktik Audit pada Industri Spesifik": [],
+    "Big Data dan Komputasi Kognitif": [],
+    "Dasar-Dasar Merger dan Akuisisi": [],
+    "Audit dan Analitik": [],
+    "Akuntan dan Kepemimpinan Ekonomi Digital": [],
+    "Dasar-Dasar Restrukturisasi Bisnis": [],
+    "Prinsip-Prinsip Berpikir Kreatif": [],
+    "Akuntansi dan Bisnis Berkelanjutan": [],
+    "Analitik Bisnis Lanjutan": [],
+    "Teori Akuntansi Keuangan": [],
 }
 
 // Objek berisi semua mata kuliah yang ada
