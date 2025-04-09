@@ -186,89 +186,273 @@ const allSubject = [
 
 // Objek berisi data dari tiap mata kuliah
 const subjectData = {
-    // term 1
-    "Dasar-Dasar Pemrograman 1": [
-        4,
-        "CSGE601020"
-    ],
      // term 1
-    "MPK Agama": [],
-    "MPK Bahasa Inggris": [],
-    "Pengantar Ekonomi 1": [],
-    "Matematika Dasar untuk Ekonomi dan Bisnis": [],
-    "Pengantar Bisnis": [],
-    "Teknik Penulisan Akademik dan Pengantar Komunikasi Bisnis": [],
-    "Statistika Ekonomi dan Bisnis": [],
-    "Literasi dalam Bahasa Inggris": [],
+    "MPK Agama": [
+        2,
+        "UIGE600004"
+    ],
+    "MPK Bahasa Inggris": [
+        2,
+        "UIGE600003"
+    ],
+    "Pengantar Ekonomi 1": [
+        3,
+        "ECEE600001"
+    ],
+    "Matematika Dasar untuk Ekonomi dan Bisnis": [
+        3,
+        "ECEE600002"
+    ],
+    "Pengantar Bisnis": [
+        2,
+        "ECMN600001"
+    ],
+    "Teknik Penulisan Akademik dan Pengantar Komunikasi Bisnis": [
+        2,
+        "ECCL600004"
+    ],
+    "Statistika Ekonomi dan Bisnis": [
+        3,
+        "ECEE600003"
+    ],
+    "Literasi dalam Bahasa Inggris": [
+        2,
+        "ECCL600001"
+    ],
 
     // term 2
-    "MPK Terintegrasi": [],
-    "Pengantar Ekonomi 2": [],
-    "Pengantar Manajemen": [],
-    "Pengantar Akuntansi": [],
-    "Matematika Keuangan": [],
-    "Koperasi": [],
-    "Metode Analisis Kasus Akuntansi dan Bisnis (MAKAB)": [],
+    "MPK Terintegrasi": [
+        6,
+        "UIGE600007"
+    ],
+    "Pengantar Ekonomi 2": [
+        3,
+        "ECEE600004"
+    ],
+    "Pengantar Manajemen": [
+        2,
+        "ECMN600003"
+    ],
+    "Pengantar Akuntansi": [
+        3,
+        "ECAC600001"
+    ],
+    "Matematika Keuangan": [
+        2,
+        "ECAC600002"
+    ],
+    "Koperasi": [
+        2,
+        "ECCL600003"
+    ],
+    "Metode Analisis Kasus Akuntansi dan Bisnis (MAKAB)": [
+        2,
+        "ECAC600003"
+    ],
 
     // term 3
-    "Akuntansi Biaya": [],
-    "Pengantar Manajemen Operasi": [],
-    "Pengantar Manajemen Pemasaran": [],
-    "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)": [],
-    "Mikroekonomi 1": [],
-    "Struktur, Proses, dan Perilaku Organisasi": [],
-    "Akuntansi Keuangan 1": [],
-    "Manajemen Keuangan": [],
+    "Akuntansi Biaya": [
+        3,
+        "ECAC600004"
+    ],
+    "Pengantar Manajemen Operasi": [
+        2,
+        "ECMN600084"
+    ],
+    "Pengantar Manajemen Pemasaran": [
+        2,
+        "ECMN600085"
+    ],
+    "Sistem Informasi Akuntansi dan Pengendalian Internal (SIAPI)": [
+        3,
+        "ECAC600005"
+    ],
+    "Mikroekonomi 1": [
+        3,
+        "ECEE600007"
+    ],
+    "Struktur, Proses, dan Perilaku Organisasi": [
+        2,
+        "ECMN600086"
+    ],
+    "Akuntansi Keuangan 1": [
+        3,
+        "ECAC600006"
+    ],
+    "Manajemen Keuangan": [
+        3,
+        "ECAC600006"
+    ],
 
     // term 4
-    "Pengauditan dan Asuransi 1": [],
-    "Akuntansi Manajemen (AM)": [],
-    "Transformasi Digital untuk Bisnis": [],
-    "Hukum dan Regulasi Bisnis": [],
-    "Perpajakan 1": [],
-    "Akuntansi Keuangan 2": [],
-    "Dasar-dasar Kepemimpinan": [],
-    "Pengantar Kewirausahaan": [],
-    "Manusia Sebagai Pelaku Ekonomi dan Bisnis": [],
+    "Pengauditan dan Asuransi 1": [
+        3,
+        "ECAC600007"
+    ],
+    "Akuntansi Manajemen (AM)": [
+        3,
+        "ECAC600008"
+    ],
+    "Transformasi Digital untuk Bisnis": [
+        2,
+        "ECAC600009"
+    ],
+    "Hukum dan Regulasi Bisnis": [
+        2,
+        "ECAC600010"
+    ],
+    "Perpajakan 1": [
+        3,
+        "ECAC600011"
+    ],
+    "Akuntansi Keuangan 2": [
+        3,
+        "ECAC600012"
+    ],
+    "Dasar-dasar Kepemimpinan": [
+        2,
+        "ECCL600006"
+    ],
+    "Pengantar Kewirausahaan": [
+        2,
+        "ECCL600002"
+    ],
+    "Manusia Sebagai Pelaku Ekonomi dan Bisnis": [
+        2,
+        "ECCL600005"
+    ],
 
     // term 5
-    "Investasi dan Pasar Modal": [],
-    "Pengauditan dan Asuransi 2": [],
-    "Perpajakan 2": [],
-    "Analitik Bisnis": [],
-    "Akuntansi Keuangan Lanjutan": [],
-    "Tata Kelola dan Manajemen Risiko": [],
-    "Etika dan Keberlanjutan": [],
+    "Investasi dan Pasar Modal": [
+        3,
+        "ECAC600013"
+    ],
+    "Pengauditan dan Asuransi 2": [
+        3,
+        "ECAC600014"
+    ],
+    "Perpajakan 2": [
+        3,
+        "ECAC600015"
+    ],
+    "Analitik Bisnis": [
+        3,
+        "ECAC600016"
+    ],
+    "Akuntansi Keuangan Lanjutan": [
+        3,
+        "ECAC600017"
+    ],
+    "Tata Kelola dan Manajemen Risiko": [
+        3,
+        "ECAC600018"
+    ],
+    "Etika dan Keberlanjutan": [
+        3,
+        "ECAC600019"
+    ],
 
     // term 6
-    "Strategi dan Manajemen Kinerja Organisasi": [],
-    "Analisis dan Pelaporan Keuangan": [],
-    "Bisnis Global": [],
+    "Strategi dan Manajemen Kinerja Organisasi": [
+        3,
+        "ECAC600020"
+    ],
+    "Analisis dan Pelaporan Keuangan": [
+        3,
+        "ECAC600021"
+    ],
+    "Bisnis Global": [
+        2,
+        "ECAC600022"
+    ],
 
     // term 8
-    "Magang Tugas Akhir": [],
-    "Skripsi": [],
-    "Studi Mandiri (plus 1 Mata Kuliah Pilihan Bebas)": [],
+    "Magang Tugas Akhir": [
+        6,
+        "ECAC600053"
+    ],
+    "Skripsi": [
+        6,
+        "ECAC600052"
+    ],
+    "Studi Mandiri (plus 1 Mata Kuliah Pilihan Bebas)": [
+        6,
+        "ECAC600054"
+    ],
 
     // mk pilihan
-    "Audit Keuangan Negara": [],
-    "Akuntansi Organisasi Nirlaba": [],
-    "Akuntansi Sektor Publik": [],
-    "Akuntansi Syariah": [],
-    "Analisis dan Perancangan Sistem": [],
-    "Analisis Keputusan Bisnis": [],
-    "Audit Sistem Informasi": [],
-    "Manajemen Teknologi Informasi": [],
-    "Perpajakan Internasional": [],
-    "Manajemen Perpajakan": [],
-    "Audit Internal": [],
-    "Audit Investigasi dan Akuntansi Forensik": [],
-    "Transformasi Digital dan Implikasi Akuntansi": [],
-    "Keuangan Perusahaan Lanjutan": [],
-    "Akuntansi Keuangan Lanjutan": [],
-    "Tata Kelola Perusahaan dan Manajemen Risiko": [],
-    "Metode Penelitian Akuntansi": [],
-    "Akuntansi Manajemen Lanjutan": [],
+    "Audit Keuangan Negara": [
+        3,
+        "ECAU606401"
+    ],
+    "Akuntansi Organisasi Nirlaba": [
+        3,
+        "ECAU606102"
+    ],
+    "Akuntansi Sektor Publik": [
+        3,
+        "ECAU606101"
+    ],
+    "Akuntansi Syariah": [
+        3,
+        "ECAU605101"
+    ],
+    "Analisis dan Perancangan Sistem": [
+        3,
+        "ECAU607301"
+    ],
+    "Analisis Keputusan Bisnis": [
+        3,
+        "ECAU609102"
+    ],
+    "Audit Sistem Informasi": [
+        3,
+        "ECAU604201"
+    ],
+    "Manajemen Teknologi Informasi": [
+        3,
+        "ECAU607302"
+    ],
+    "Perpajakan Internasional": [
+        3,
+        "ECAU603203"
+    ],
+    "Manajemen Perpajakan": [
+        3,
+        "ECAU603203"
+    ],
+    "Audit Internal": [
+        3,
+        "ECAU604303"
+    ],
+    "Audit Investigasi dan Akuntansi Forensik": [
+        3,
+        "ECAU604203"
+    ],
+    "Transformasi Digital dan Implikasi Akuntansi": [
+        3,
+        "ECAU607211"
+    ],
+    "Keuangan Perusahaan Lanjutan": [
+        3,
+        "ECAU609118"
+    ],
+    "Akuntansi Keuangan Lanjutan": [
+        3,
+        "ECAU601313"
+    ],
+    "Tata Kelola Perusahaan dan Manajemen Risiko": [
+        3,
+        "ECAU601307"
+    ],
+    "Metode Penelitian Akuntansi": [
+        3,
+        "ECAU609106"
+    ],
+    "Akuntansi Manajemen Lanjutan": [
+        3,
+        "ECAU607304"
+    ],
     "Praktik Akuntansi dan Bisnis Kontemporer": [],
     "Praktik Audit pada Industri Spesifik": [],
     "Big Data dan Komputasi Kognitif": [],
