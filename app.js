@@ -1,6 +1,6 @@
 const myMiniProject = [
     {
-        "name": "Subject Taking FEB UI",
+        "name": "Subject Taking",
         "buildMonth": "April",
         "buildYear": "2025"
     },
