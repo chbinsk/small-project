@@ -453,17 +453,50 @@ const subjectData = {
         3,
         "ECAU607304"
     ],
-    "Praktik Akuntansi dan Bisnis Kontemporer": [],
-    "Praktik Audit pada Industri Spesifik": [],
-    "Big Data dan Komputasi Kognitif": [],
-    "Dasar-Dasar Merger dan Akuisisi": [],
-    "Audit dan Analitik": [],
-    "Akuntan dan Kepemimpinan Ekonomi Digital": [],
-    "Dasar-Dasar Restrukturisasi Bisnis": [],
-    "Prinsip-Prinsip Berpikir Kreatif": [],
-    "Akuntansi dan Bisnis Berkelanjutan": [],
-    "Analitik Bisnis Lanjutan": [],
-    "Teori Akuntansi Keuangan": [],
+    "Praktik Akuntansi dan Bisnis Kontemporer": [
+        3,
+        "ECAU607303"
+    ],
+    "Praktik Audit pada Industri Spesifik": [
+        3,
+        "ECAU608305"
+    ],
+    "Big Data dan Komputasi Kognitif": [
+        3,
+        "ECAU608303"
+    ],
+    "Dasar-Dasar Merger dan Akuisisi": [
+        3,
+        "ECAU608306"
+    ],
+    "Audit dan Analitik": [
+        3,
+        "ECAU608307"
+    ],
+    "Akuntan dan Kepemimpinan Ekonomi Digital": [
+        3,
+        "ECAU608304"
+    ],
+    "Dasar-Dasar Restrukturisasi Bisnis": [
+        3,
+        "ECAU608308"
+    ],
+    "Prinsip-Prinsip Berpikir Kreatif": [
+        3,
+        "ECAU601191"
+    ],
+    "Akuntansi dan Bisnis Berkelanjutan": [
+        3,
+        "ECAU601308"
+    ],
+    "Analitik Bisnis Lanjutan": [
+        2,
+        "ECAU608309"
+    ],
+    "Teori Akuntansi Keuangan": [
+        3,
+        "ECAU601401"
+    ],
 }
 
 // Fungsi untuk mengembalikan panjang suatu array
